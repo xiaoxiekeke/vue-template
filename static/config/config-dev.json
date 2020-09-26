@@ -1,0 +1,47 @@
+{
+  "interfaceUrl": "",
+  "staticUrl" : "http://172.16.1.22:7777/static-res",
+  "voiceUrl": "http://172.16.1.22:8185",
+  "downUrl" : "http://172.16.1.22:8185",
+  "flowUrl" : "http://localhost:8090",
+  "csp" : "http://localhost:8081/csp/#/?token={token}&bid={bid}",
+  "callResult" : ["0","15"],
+  "encrypt" : true,
+  "im" : {
+    "serverUrl" : "wss://dev.xiaomankf.com:5391"
+  },
+  "fsConfig":{
+    "socketURL":"ptah.kxjlcc.com/rtcwss",
+    "sipURI":"@webrtc",
+    "iceURL":["stun:101.201.226.199:13478"],
+    "callURI":"yetapreview",
+    "expURI" : "96866013"
+  },
+  "service" : {
+    "uc" : "uc-api",
+    "brain" : "brain",
+    "bm" : "bm",
+    "outboundData" : "outbound-data",
+    "fee-bak" : "fee-api",
+    "fee" : "fee",
+    "outbound" : "outbound",
+    "outboundManage" : "outbound-manage",
+    "yungoApi" : "yungo-api",
+    "yungoOss" : "yungo-oss",
+    "outboundReport" : "outbound-report",
+    "brainkb" : "brainkb",
+    "crm" : "crm",
+    "weixin" : "weixin",
+    "mock" : "mock/52",
+    "yungoAbp" : "yungo-abp",
+    "taichiDataApi":"taichi-data-api",
+    "downloadCenterApi":"download-center-api",
+    "downloadCenterRecord":"download-center-record",
+    "speechSkill" : "speechskill",
+    "openapiAdmin":"openapi-admin",
+    "openapi" : "openapi",
+    "resmanage" : "resmanage",
+    "kylin":"kylin",
+    "kxjlAc":"kxjl-ac"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "",
+  "ani": "",
+  "dni": "",
+  "name": "",
+  "hostGroupId": "",
+  "actions": [
+    {
+      "command": "App$set",
+      "args": "bypass_media=false"
+    },
+    {
+      "command": "Bridge",
+      "args": ""
+    }
+  ],
+  "headers": {
+    "robot-id": "",
+    "business-id": ""
+  },
+  "sourceAllows": [],
+  "relation": {
+    "business-id": "",
+    "business-name": "",
+    "app-id": "",
+    "app-name": "",
+    "robot-id": "",
+    "robot-name": ""
+  }
+}

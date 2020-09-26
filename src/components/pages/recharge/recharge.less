@@ -1,0 +1,78 @@
+@import (reference) "../../../assets/less/var.less";
+
+.recharge{
+	.recharge__title{
+		margin: 0;
+	    font-size: 16px;
+	    line-height: 34px;
+	    margin-bottom: 16px;
+	    font-weight: bold;
+	    color: #585858;
+	}
+	.recharge__detail{
+		background: #fff;
+	    margin-top: 15px;
+	    margin-bottom:10px;
+	    padding: 25px;
+	}
+	.recharge__info{
+		padding-bottom: 45px;
+	    border-bottom:1px solid #ccc;
+	}
+	.recharge-head{
+	    margin: 0;
+	    font-size: 14px;
+	    font-weight: 700;
+	    color: #585858;
+	    margin-bottom: 25px;
+	}
+	.recharge__money{
+	    margin: 20px 0 35px 0;
+	    .recharge-input{
+	    	width:300px;
+	    }
+	}
+	.money-choice{
+	    position: relative;
+	    display: inline-block;
+	    height: 40px;
+	    line-height: 40px;
+	    border:1px solid #ccc;
+	    width: 110px;
+	    text-align: center;
+	    cursor: pointer;
+	}
+	.money-choice.selected{
+	    border:1px solid #00b792;
+	}
+	.money-choice.selected:after{
+	    display: inline-block;
+	    content: '';
+	    background: url(./images/set-pay-money.png) no-repeat;
+	    position: absolute;
+	    width: 25px;
+	    height: 14px;
+	    bottom: 0px;
+	    right: 0;
+	}
+	.recharge__info .money-choice{
+	    margin-right:20px;
+	}
+	.hightlight{
+		font-size: 16px;
+		color:@base-color;
+	}
+	.recharge__pay-opt{
+	    margin-top:20px;
+	}
+	.recharge__pay-desc{
+	    display: inline-block;
+	    margin-left: 14px;
+	    font-size: 12px;
+	    vertical-align: middle;
+	}
+}
+
+	
+
+	

@@ -1,0 +1,50 @@
+{
+    "contact_way": [
+        {
+            "label": "电话拜访",
+            "value": "0"
+        },
+        {
+            "label": "当面拜访",
+            "value": "1"
+        },
+        {
+            "label": "网络拜访",
+            "value": "2"
+        },
+        {
+            "label": "短信拜访",
+            "value": "3"
+        }
+    ],
+    "trace_stage": [
+         {
+            "label": "线索",
+            "value": "0"
+        },
+        {
+            "label": "AI初访",
+            "value": "1"
+        },
+        {
+            "label": "人工初访",
+            "value": "2"
+        },
+        {
+            "label": "客户意向",
+            "value": "3"
+        },
+        {
+            "label": "客户报价",
+            "value": "4"
+        },
+        {
+            "label": "客户成交",
+            "value": "5"
+        },
+        {
+            "label": "人工接管",
+            "value": "6"
+        }
+    ]
+}

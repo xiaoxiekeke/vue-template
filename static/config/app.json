@@ -1,0 +1,52 @@
+{
+    "code": 0,
+    "message": "ok",
+    "result": {
+        "totalCount": 16,
+        "totalPages": 1,
+        "rows": [
+            {
+                "app_id": 20180739,
+                "app_key": "N2YwNjI5ODktMDEyMy00ODQ2LWExZWYtNDc2ZjUzOTQ2ZTFh",
+                "app_name": "据合app23333",
+                "app_secret": "OUU4MTQ0MUEzMDk2MUFEM0MwMjE2REY5QkY5OTlEOUE=",
+                "app_type": 1,
+                "app_typeDesc" : "呼出",
+                "app_uuid": "97d213fe-cee5-48a3-ba03-a4c9305e6336",
+                "business_id": 167,
+                "concurrents": 1,
+                "description": "据合app",
+                "op_type": null,
+                "pageIndex": 1,
+                "pageSize": 2147483647,
+                "request_seq": null,
+                "resource": null,
+                "tags": "金融,金融123,徐日良",
+                "time_create": 1534314326510,
+                "time_update": 1534401310889,
+                "token": "c49db06d17c5273bbcffbf0d86d66994"
+            },
+             {
+                "app_id": 20180736,
+                "app_key": "NWQ4YjM0Y2QtNjY5Yi00MDk0LTgwZDktNWFlOTBhM2FlN2Zl",
+                "app_name": "徐日良测试",
+                "app_secret": "RjM1NDIwNzBEMEZBNjZDNEFCNDlGQzAyNTQ2MjM3NjI=",
+                "app_type": 0,
+                "app_typeDesc" : "呼出",
+                "app_uuid": "9cfc6470-c9c9-4d29-a337-3516aa28adb9",
+                "business_id": 167,
+                "concurrents": 1,
+                "description": "徐日良测试323",
+                "op_type": null,
+                "pageIndex": 1,
+                "pageSize": 2147483647,
+                "request_seq": null,
+                "resource": null,
+                "tags": "金融,催缴",
+                "time_create": 1534305042936,
+                "time_update": 1534315225907,
+                "token": "fd45c2cb2b6e0a05bd3833a4e4bf8d89"
+            }
+        ]
+    }
+}

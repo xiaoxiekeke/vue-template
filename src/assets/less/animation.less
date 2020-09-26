@@ -1,0 +1,81 @@
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(0px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+        transform: translateX(10px);
+    }
+}
+@keyframes fadeInTop{
+     0% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes twinkle-down{
+    0% {
+       border-color: rgba(14, 182, 142, .8)
+    }
+    100% {
+        border-color:rgba(14, 182, 142, 0)
+    }
+}
+
+.fadeInRight {
+    animation-name: fadeInRight;
+}
+.fadeInLeft {
+    animation-name: fadeInLeft;
+}
+.twinkle-down{
+     animation-name:twinkle-down;
+}
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+.animated-down{
+    animation-iteration-count:3;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.animateTrans{
+    -webkit-animation: spin 3s linear 3s 5 alternate;
+    animation: spin 3s linear infinite;
+}

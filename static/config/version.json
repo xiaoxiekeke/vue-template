@@ -1,0 +1,9 @@
+{
+	"default" : "http://localhost:8088",
+	"version" : {
+		"https://172.16.1.22/console/" : {
+			"bid" : [],
+			"account" : []
+		}
+	}
+}

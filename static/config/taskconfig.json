@@ -1,0 +1,96 @@
+{
+    "recallMaxCountList": [
+        {
+            "label": "1次",
+            "value": 1
+        },
+        {
+            "label": "2次",
+            "value": 2
+        },
+        {
+            "label": "3次",
+            "value": 3
+        },
+        {
+            "label": "4次",
+            "value": 4
+        },
+        {
+            "label": "5次",
+            "value": 5
+        },
+        {
+            "label": "6次",
+            "value": 6
+        },
+        {
+            "label": "7次",
+            "value": 7
+        },
+        {
+            "label": "8次",
+            "value": 8
+        },
+        {
+            "label": "9次",
+            "value": 9
+        },
+        {
+            "label": "10次",
+            "value": 10
+        }
+    ],
+    "recallWaitTimeList": [
+        {
+            "label": "2秒",
+            "value": 2
+        },
+        {
+            "label": "15分钟",
+            "value": 900
+        },
+        {
+            "label": "30分钟",
+            "value": 1800
+        },
+        {
+            "label": "45分钟",
+            "value": 2700
+        },
+        {
+            "label": "60分钟",
+            "value": 3600
+        },
+        {
+            "label": "120分钟",
+            "value": 7200
+        },
+        {
+            "label": "180分钟",
+            "value": 10800
+        }
+    ],
+    "miniConnectRateList": [
+        {
+            "label": "25%",
+            "value": 0.25
+        },
+        {
+            "label": "20%",
+            "value": 0.2
+        },
+        {
+            "label": "15%",
+            "value": 0.15
+        },
+        {
+            "label": "10%",
+            "value": 0.1
+        },
+        {
+            "label": "5%",
+            "value": 0.05
+        }
+    ]
+}

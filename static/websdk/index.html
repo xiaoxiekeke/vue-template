@@ -1,0 +1,187 @@
+  <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache"> 
+    <meta http-equiv="Expires" content="0"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="referrer" content="always">
+    <meta name="renderer" content="webkit">
+    <title>websdk示例</title>  
+    <link rel="stylesheet" type="text/css" href="https://agent.kxjlcc.com/kcdn/element-ui/2.3.9/index.css">
+    <style>
+        #app{display:flex;padding:20px;}
+        .input-txt{width:200px;}
+        .column{margin-bottom:15px;}
+        .phone-step{margin-bottom: 25px;}
+        .phone-demo{  width:500px; }
+    </style>
+    <script src="https://agent.kxjlcc.com/websdk/plugins/jssip.js"></script> 
+    <script src="https://agent.kxjlcc.com/websdk/plugins/crypto.js"></script> 
+    <script src="xiaoman-phone.js"></script>
+    <script src="https://agent.kxjlcc.com/kcdn/vue/2.5.16/vue.min.js"></script> 
+    <script src="https://agent.kxjlcc.com/kcdn/element-ui/2.3.9/index.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="phone-demo">
+        <el-steps :active="active" class="phone-step">
+            <el-step title="账号登录"></el-step>
+            <el-step title="添加事件监听"></el-step>
+            <el-step title="开启电话服务"></el-step>
+            <el-step title="发起外呼"></el-step>
+        </el-steps>
+        <el-form label-width="100px" v-show="active == 0" label-position="left">
+            <el-form-item label="登录账号">
+              <el-input type="text" class="input-txt" v-model="account" clearable  autocomplete="off"></el-input>
+            </el-form-item>
+            <el-form-item label="登录密码">
+              <el-input type="password" class="input-txt" v-model="pwd" clearable  autocomplete="off"></el-input>
+            </el-form-item>
+            <el-form-item>
+              <el-button type="primary" @click="login">登录</el-button>
+            </el-form-item>
+        </el-form>
+        <div class="column" v-show="active == 1">
+            <el-button @click="addEvent">添加事件监听</el-button>
+        </div>
+
+        <div class="column" v-show="active == 2">
+            <el-button @click="openPhone">打开电话功能</el-button>
+        </div>
+
+        <div class="column" v-show="active == 3">
+          <el-form label-width="100px"  label-position="left">
+            <el-form-item label="外显号码">
+              <el-select v-model="line" >
+                  <el-option v-for="item in lineList" :key="item"
+                    :label="item"
+                    :value="item"></el-option>
+              </el-select>
+            </el-form-item>
+            <el-form-item label="手机号码">
+              <el-input type="text" class="input-txt" v-model.trim="phone"></el-input>
+            </el-form-item>
+            <el-form-item>
+              <el-button type="primary" @click="callout">外呼</el-button>
+            </el-form-item>
+          </el-form>
+        </div>
+
+        <div style="margin-top:100px;">
+          <el-button @click="hangup">挂断</el-button>
+          <el-button @click="answer">接听</el-button>
+          <el-button @click="closePhone">关闭电话功能</el-button>
+          <el-button @click="logout">账号退出</el-button>
+        </div> 
+      </div>
+          
+    </div>
+
+    <script>
+        var app = new Vue({
+          el: '#app',
+          data: {
+            active : 0,
+            line : '',
+            lineList : [],
+            account : '15556985227',
+            pwd : 'xiaoman123456',
+            phone : '18256045597'
+          },
+          methods : {
+              answer(){
+                xiaoman.phone.answer({
+                  success: (res) =>  {
+                        this.$message({type :'success',message : '操作成功'})
+                  },
+                  fail:  (res) => {
+                      this.$message.error(res.desc)
+                  }
+                });
+              },
+              login (){
+                  xiaoman.base.login({
+                    account : this.account,
+                    password : this.pwd,
+                    success:(res) => {
+                        this.lineList = res.outshowtel || [];
+                        this.$message({type :'success',message : '登录成功'})
+                        this.active = 1;
+                    },
+                    fail: (res) => {
+                        this.$message.error('登录失败：' +res.desc)
+                    }
+                });
+              },
+              logout (){
+                  xiaoman.base.logout({
+                      success:(res) => {
+                          this.active = 0;
+                          this.$message({type :'success',message : '登出成功'})
+                      },
+                      fail: (res) => {
+                          this.$message.error('登出失败：' +res.desc)
+                      }
+                  });
+              },
+              addEvent (){
+                  xiaoman.phone.event.onMessage(function(res){
+                      console.log(JSON.stringify(res))
+                  })
+                  this.active = 2;
+              },
+              openPhone (){
+                  xiaoman.phone.open({
+                    success: (res) => {
+                        this.$message({type :'success',message : '启动成功'})
+                        this.active = 3;
+                    },
+                    fail: (res) => {
+                        this.$message.error(res.desc)
+                    }
+                  })
+              },
+              closePhone (){
+                  xiaoman.phone.close()
+                  this.active = 2;
+              },
+              callout (){
+                 xiaoman.phone.callOut({
+                    phoneNum : this.phone,
+                    line : this.line,
+                    userData : {
+                      "call-relation-id:" : "123456",
+                      "app-id":'11',
+                      "robot-id":'22'
+                    },
+                    success:  (res) => {
+                       this.$message({type :'success',message : JSON.stringify(res)})
+                    },
+                    fail: (res) => {
+                      this.$message.error(JSON.stringify(res))
+                    }
+                });
+              },
+              hangup (){
+                xiaoman.phone.release({
+                  success: function (res) {
+                    
+                  },
+                  fail: function (res) {
+                  }
+              });
+              }
+          },
+
+          mounted : function(){
+              
+          }
+        })
+    </script>
+   
+  </body>
+</html>

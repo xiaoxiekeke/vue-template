@@ -1,0 +1,284 @@
+//分页组件重置
+.el-pagination__total{
+    float:left;
+}
+.el-pagination__sizes{
+  float:left;
+}
+.el-pagination__jump{
+  float:right;
+}
+.el-pagination.is-background .el-pager li:not(.disabled).active{
+	background-color:@active-color;
+}
+.el-pagination.is-background .el-pager li:not(.disabled):hover{
+	color:@active-color;
+}
+.el-pagination.is-background .el-pager li:not(.disabled).active:hover{
+	color:#fff;
+}
+//重置表格高度
+.el-table td {
+ 	padding:6px 0;
+}
+.el-table th {
+ 	padding:6px 0;
+}
+.el-table th, .el-table tr{
+	height:45px;
+}
+.el-table .descending .sort-caret.descending{
+	border-top-color:@base-color;
+}
+.el-table .ascending .sort-caret.ascending{
+	border-bottom-color:@base-color;
+}
+//按钮颜色重置
+.el-button--default:focus,.el-button--default:hover{
+	color:@hover-color;
+	border-color: @hover-color;
+}
+.el-button--primary.is-plain{
+	background-color: inherit;
+}
+.el-button--primary {
+    background-color: @base-color;
+    border-color:@base-color;
+}
+.el-button--primary:focus,.el-button--primary:hover{
+	color:#fff;
+	background-color: @hover-color;
+    border-color: @hover-color;
+}
+.el-button--primary:active{
+	background-color: @active-color;
+    border-color: @active-color;
+}
+.el-button--text{
+	color:@base-color;
+}
+.el-button--text:active {
+    color: @hover-color;
+}
+.el-button--text:focus, .el-button--text:hover{
+	color:@hover-color;
+}
+.el-button--primary.is-disabled, .el-button--primary.is-disabled:active, .el-button--primary.is-disabled:focus, .el-button--primary.is-disabled:hover{
+	background-color: @hover-color;
+    border-color: @hover-color;
+}
+.el-button--primary.is-plain{
+	color:@base-color;
+	border-color:@base-color;
+}
+.el-button--primary.is-plain:active{
+	background:@active-color;
+	border-color:@active-color;
+}
+.el-button--primary.is-plain:focus, .el-button--primary.is-plain:hover{
+	background:@hover-color;
+	border-color:@hover-color;
+}
+.el-button--primary.is-plain:active .link{
+	color:#fff;
+}
+.el-button--primary.is-plain:focus, .el-button--primary.is-plain:hover .link{
+	color:#fff;
+}
+.el-button.is-active, .el-button.is-plain:active{
+	color:@active-color;
+	border-color:@active-color;
+}
+
+.el-button--mini, .el-button--small{
+	font-size:14px;
+}
+
+
+.el-textarea__inner:focus{
+	border-color: #009f7f;
+}
+//进度条样式重置
+.el-step__head.is-finish{
+	color:@base-color;
+	border-color:@base-color;
+}
+.el-step__title.is-finish{
+	color:@base-color;
+}
+.el-step__title{
+	font-size: 14px;
+}
+/*
+* 复选框
+*/
+.el-checkbox__input.is-checked+.el-checkbox__label{
+	color:@base-color;
+}
+.el-checkbox__input.is-checked .el-checkbox__inner,
+ .el-checkbox__input.is-indeterminate .el-checkbox__inner{
+	background-color: @base-color;
+    border-color: @base-color;
+}
+.el-checkbox__inner:hover{
+	 border-color: @hover-color;
+}
+.el-checkbox__inner:focus{
+	 border-color: @active-color;
+}
+.el-checkbox__input.is-focus .el-checkbox__inner{
+	border-color:@base-color;
+}
+//tab
+.el-tabs__item.is-active{
+	color:@active-color;
+}
+.el-tabs__item:hover{
+	color:@hover-color;
+}
+.el-tabs__active-bar{
+	background-color: @hover-color;
+}
+//时间
+.el-date-table td.end-date span, .el-date-table td.start-date span{
+	background-color:@active-color;
+}
+.el-date-table td.today span{
+	color:@base-color;
+}
+.el-date-table td.available:hover{
+	color:@hover-color;
+}
+.el-picker-panel__shortcut:hover{
+	color:@hover-color;
+}
+//下拉框
+.el-select-dropdown.is-multiple .el-select-dropdown__item.selected{
+	color:@base-color;
+}
+.el-select .el-input.is-focus .el-input__inner{
+	border-color:@hover-color;
+}
+.el-range-editor.is-active, .el-range-editor.is-active:hover{
+	border-color:@hover-color;
+}
+//input
+.el-input__inner:focus{
+	border-color:@active-color;
+}
+//
+.el-form-item{
+	margin-bottom:20px;
+}
+
+//
+.el-radio__input.is-checked+.el-radio__label{
+	color:@base-color;
+}
+.el-radio.is-bordered.is-checked{
+	border-color:@base-color;
+}
+.el-table__fixed-right::before, .el-table__fixed::before{
+	background-color: transparent;
+}
+/** 浏览器滚动条重置**/
+/*!*滚动条整体*!*/
+::-webkit-scrollbar{height:12px !important;width:4px !important; /*滚动条宽度*/}
+/*滚动条按钮*/
+::-webkit-scrollbar-button {}
+::-webkit-scrollbar-track{background-color:#eee;border-radius: 25px;cursor: pointer;}
+::-webkit-scrollbar-track-piece{background-color:#8e8e8e;cursor: pointer;}
+::-webkit-scrollbar-thumb{background-color:#c9c9c9;border:none;border-radius:25px !important;height:12px !important;}
+.msgbox-cont::-webkit-scrollbar {height:12px;}
+/*横竖滚动条交角*/
+::-webkit-scrollbar-corner {background-color: #F3F3F3;cursor: pointer;}
+/*横竖滚动条交角图案*/
+::-webkit-resizer {background-repeat: no-repeat;background-position: bottom right;}
+/*鼠标滑过滑动条*/
+::-webkit-scrollbar-thumb:hover{background-color:#c5c3c3;cursor: pointer;}
+::-webkit-scrollbar-track-piece{border-radius: 25px;}
+
+.el-scrollbar__wrap{
+	overflow-x:hidden;
+}
+
+.el-tooltip__popper.is-light{
+	border-color:#ccc;
+}
+.el-tooltip__popper.is-light[x-placement^=top] .popper__arrow{
+	border-top-color: #ccc;
+}
+.el-tooltip__popper[x-placement^=top] .popper__arrow::after{
+	border-top-color:#ccc;
+}
+.el-radio__input.is-checked .el-radio__inner{
+	border-color: @base-color;
+    background: @base-color;
+}
+.el-radio__inner:hover {
+    border-color: @base-color;
+}
+.el-dropdown-menu__item:focus, .el-dropdown-menu__item:not(.is-disabled):hover{
+	color: @base-color;
+}
+.el-dropdown-link{
+	color:@base-color;
+	cursor: pointer;
+}
+.el-progress__text{
+	float:right;
+}
+.el-progress-bar{
+	margin-right:-60px;
+}
+
+/**/
+.el-popover{
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.el-table__fixed, .el-table__fixed-right{
+	box-shadow:none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+
+.el-progress-bar__inner{
+	background-color: @base-color;
+	
+}
+
+.el-menu-item{
+	padding-left: 30px !important;
+	box-sizing: border-box;
+	border-left: 4px solid rgba(255,255,255,0);
+}
+
+.el-menu-item.is-active {
+  // color: @base-color;
+  color: #fff;
+  border-left: 4px solid @base-color;
+}
+.el-tag.el-tag--info{
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+
+/*
+* 播放器组件样式重置
+*/
+.k-player-process{
+	background-color: @hover-color;
+}
+.k-player-process--played{
+	background-color: @active-color;
+}
+.k-player-process--played:after{
+	background: @active-color;
+	box-shadow: 0 0 4px @active-color;
+}

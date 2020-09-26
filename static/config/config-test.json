@@ -1,0 +1,44 @@
+{
+  "interfaceUrl": "",
+  "staticUrl" : "https://test.xiaomankf.com:8083/static-res",
+  "voiceUrl": "https://test.xiaomankf.com:8083/oss-voice",
+  "flowUrl" : "https://test.xiaomankf.com:8083/flow",
+  "encrypt" : true,
+  "callResult": ["0","15"],
+  "im" : {
+    "serverUrl" : "wss://test.xiaomankf.com:5291"
+  },
+  "login": "https://test.xiaomankf.com:8083/manage/#/yeta/login",
+  "fsConfig": {
+    "socketURL": "182.92.96.151/fs_webrtc",
+    "sipURI": "@webrtc",
+    "iceURL": [
+      "stun:182.92.96.151:3478"
+    ],
+    "callURI": "skillpreview"
+  },
+  "service" : {
+    "uc":"uc-api",
+    "brain" : "brain",
+    "bm" : "bm",
+    "fee" : "fee-api",
+    "outboundManage" : "outbound-manage-api",
+    "yungoApi" : "yungo-api",
+    "yungoOss" : "oss-file",
+    "outboundReport" : "outbound-report",
+    "brainkb":"brainkb",
+    "weixin" : "weixin-test",
+    "mock":"mock/52",
+    "crm":"crm",
+    "yungoAbp" : "yungo-abp",
+    "taichiDataApi":"taichi-data-api",
+    "speechSkill":"speechskill-api",
+    "openapiAdmin":"openapi-admin",
+    "openapi" : "openapi",
+    "downloadCenterApi":"download-center-api",
+    "downloadCenterRecord":"download-center-api",
+    "resmanage":"resmanage-api",
+    "kylin":"kylin",
+    "kxjlAc":"kxjl-ac"
+  }
+}
